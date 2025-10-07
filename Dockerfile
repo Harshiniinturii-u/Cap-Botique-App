@@ -1,7 +1,7 @@
 FROM node:18
 WORKDIR /Botique_App
 COPY package*.json ./
-RUN npm install
+RUN npm install --production
 COPY . .
-EXPOSE 3015
+EXPOSE 3000
 CMD ["node","app.js"]
